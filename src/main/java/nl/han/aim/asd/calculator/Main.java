@@ -1,5 +1,9 @@
 package nl.han.aim.asd.calculator;
 
+import nl.han.aim.asd.expression.Addition;
+import nl.han.aim.asd.expression.Expression;
+import nl.han.aim.asd.expression.Multiplier;
+import nl.han.aim.asd.expression.Number;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -37,13 +41,13 @@ public class Main {
         System.out.println("Input: " + expressionString);
 
         // TODO 4.3 1a -- Maak AST-classes in de expression package.
-//        System.out.println("AST: " + reader.getTopExpression());
+        System.out.println("AST: " + reader.getTopExpression());
 
         // TODO 4.3 2 -- Implementeer een Evaluator klasse met een
         //  methode double eval(Expression ast) die de sommen uitrekent.
-        // Evalueer de expressie
-//        System.out.println("Evaluatie: " + expressionString + " = "
-//                + new Evaluator().evaluate(reader.getTopExpression()));
+//         Evalueer de expressie
+        System.out.println("Evaluatie: " + expressionString + " = "
+                + new Evaluator().eval(reader.getTopExpression()));
 
     }
 }
